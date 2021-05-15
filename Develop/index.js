@@ -1,26 +1,24 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-// Install the `inquirer` dependency HERE
+// Install the `inquirer` dependency
 const inquirer = require("inquirer");
+
+//
+const generate_markdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
 
     {   name: "Project Title",
-        message: "Write the name of your project title",
+        message: "What is the name of your project? ",
         type: "input"
     },
 
-    {  name: "Description",
-       message: "Write a detailed explanation of what your project is and does: ",
-       type: "input"
+    {   name: "Description",
+        message: "Write a detailed explanation of what your project is and does: ",
+        type: "input"
     },
 
-    {  name: "Table of Contents",
-       message: "Create a Table of Contents for all the sections needed: ",
-       type: "input"
-    },
-    
     {   name: "Installation",
         message: "How do you install your project?",
         type: "input"
@@ -33,7 +31,16 @@ const questions = [
 
     {   name: "License",
         message: "Please input the license for the project: ",
-        type: "input"
+        type: "list",
+        choices: [
+            "Apache",
+            "Academic",
+            "GNU",
+            "ISC",
+            "MIT",
+            "Mozilla",
+            "Open"
+        ]
     },
 
     {   name: "Contributing",
@@ -55,15 +62,17 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
-    fileName = data.name
-    .toUpperCase()
-    .split(' ')   
-    .join('') + '.md';
 
-    fs.writeFile( fileName, JSON.stringify(data, null, '\t'), function(err) {
+    fileName = data.name
+        .toUpperCase()
+        .split(' ')
+        .join('') + '.md';
+
+
+
+    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function (err) {
         if (err) {
-          return console.log(err);
+            return console.log(err);
         }
     });
 
@@ -73,7 +82,10 @@ function writeToFile(fileName, data) {
 function init() {
 
     inquirer.prompt(questions)
-    .then( writeToFile() );
+        .then( writeToFile() )
+        .catch ( error => {
+            console.log(error);
+        });
 
 }
 
