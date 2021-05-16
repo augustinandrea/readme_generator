@@ -9,13 +9,13 @@ const generate_markdown = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
 const questions = [
 
-    {   name: "Project Title",
-        message: "What is the name of your project? ",
+    {   name: "Title",
+        message: "What is the name of your project?",
         type: "input"
     },
 
     {   name: "Description",
-        message: "Write a detailed explanation of what your project is and does: ",
+        message: "Write a detailed explanation of what your project is and does:",
         type: "input"
     },
 
@@ -30,16 +30,20 @@ const questions = [
     },
 
     {   name: "License",
-        message: "Please input the license for the project: ",
+        message: "Please input the license for the project:",
         type: "list",
         choices: [
-            "Apache",
-            "Academic",
-            "GNU",
+            "Apache 2.0",
+            "Eclipse",
+            "GNU GPL v3",
+            "GNU GPL v2",
+            "GNU AGPL v3",
+            "GNU LGPL v3",
+            "GNU FDL v1.3",
             "ISC",
             "MIT",
             "Mozilla",
-            "Open"
+            "Unlicense"
         ]
     },
 
@@ -49,26 +53,36 @@ const questions = [
     },
 
     {   name: "Tests",
-        message: "What are some tests for your project? ",
+        message: "What are some tests for your project?",
         type: "input"
     },
 
     {   name: "Questions",
-        message: "Any questions needed for the project? ",
+        message: "Any questions needed for the project?",
+        type: "input"
+    },
+
+    {   name: "Github_username",
+        message: "Write your Github username:",
+        type: "input"
+    },
+
+    {   name: "Email",
+        message: "Write your email:",
         type: "input"
     }
 
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
 
-    fileName = data.name
+    var fileName = data.Title
         .toUpperCase()
         .split(' ')
         .join('') + '.md';
 
-
+    console.log("file name: " + fileName);
 
     fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function (err) {
         if (err) {
@@ -82,10 +96,7 @@ function writeToFile(fileName, data) {
 function init() {
 
     inquirer.prompt(questions)
-        .then( writeToFile() )
-        .catch ( error => {
-            console.log(error);
-        });
+        .then( results => writeToFile(results) );
 
 }
 
