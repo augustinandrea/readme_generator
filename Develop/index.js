@@ -100,7 +100,7 @@ function writeToFile(data) {
     console.log("file name: " + fileName);
 
     var ReadMe = generate_markdown(data);
-    console.log(ReadMe);
+    console.log("Generating README......");
 
     fs.writeFile(fileName, ReadMe, function (err) {
         if (err) {
