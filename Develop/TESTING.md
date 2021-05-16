@@ -14,7 +14,7 @@
 
  
   ## Installation:
-  work
+  mo
 
   ## Usage:
   help
@@ -22,7 +22,7 @@
   
   ## Licenses: 
   Apache 2.0
-  undefined
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
   ## Contribution:
@@ -33,9 +33,9 @@
 
   
   ## Questions:
-  work
+  no
 
-  GitHub: [@us]
-  Email: no
+  GitHub: [@no]
+  Email: yes
 
 
