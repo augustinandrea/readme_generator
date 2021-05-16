@@ -2,6 +2,9 @@
 const fs = require('fs');
 // Install the `inquirer` dependency
 const inquirer = require("inquirer");
+//
+const path = require("path");
+
 
 //
 const generate_markdown = require('./utils/generateMarkdown.js');
@@ -11,12 +14,24 @@ const questions = [
 
     {   name: "Title",
         message: "What is the name of your project?",
-        type: "input"
+        type: "input",
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("A valid project title is required.");
+            }
+            return true;
+        }
     },
 
     {   name: "Description",
         message: "Write a detailed explanation of what your project is and does:",
-        type: "input"
+        type: "input",
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("A valid explanation is needed.");
+            }
+            return true;
+        }
     },
 
     {   name: "Installation",
@@ -84,7 +99,10 @@ function writeToFile(data) {
 
     console.log("file name: " + fileName);
 
-    fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function (err) {
+    var ReadMe = generate_markdown(data);
+    console.log(ReadMe);
+
+    fs.writeFile(fileName, ReadMe, function (err) {
         if (err) {
             return console.log(err);
         }
@@ -97,7 +115,6 @@ function init() {
 
     inquirer.prompt(questions)
         .then( results => writeToFile(results) );
-
 }
 
 // Function call to initialize app
