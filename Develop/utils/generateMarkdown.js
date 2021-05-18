@@ -123,7 +123,7 @@ function renderLicenseSection(license, username) {
   switch (license) {
 
     case "Apache 2.0":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright(c) [${d.getFullYear()}] [${username}] \n
 
       Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
@@ -139,7 +139,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "Eclipse":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
 
         Licensed under the Eclipse License, Version 2.0 (the "License");
         you may not use this file except in compliance with the License.
@@ -155,7 +155,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "GNU GPL v3":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
         
         This program is free software: you can redistribute it and/or modify
         it under the terms of the GNU General Public License as published by
@@ -172,7 +172,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "GNU GPL v2":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
         This program is free software; you can redistribute it and/or
         modify it under the terms of the GNU General Public License
         as published by the Free Software Foundation; either version 2
@@ -190,7 +190,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "GNU AGPL v3":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU Affero General Public License as
       published by the Free Software Foundation, either version 3 of the
@@ -207,7 +207,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "GNU LGPL v3":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       This program is free software: you can redistribute it and/or modify
       it under the terms of the GNU Affero General Public License as
       published by the Free Software Foundation, either version 3 of the
@@ -224,7 +224,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "GNU FDL v1.3":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       Permission is granted to copy, distribute and/or modify this document
       under the terms of the GNU Free Documentation License, Version 1.3
       or any later version published by the Free Software Foundation;
@@ -235,7 +235,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "ISC":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
       THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.      
@@ -243,7 +243,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "MIT":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
       The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -253,7 +253,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "Mozilla":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
       THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.      
@@ -261,7 +261,7 @@ function renderLicenseSection(license, username) {
       break;
 
     case "Unlicense":
-      licenseSection = `Copyright(C) [${d.getFullYear()}] [${username}] \n
+      licenseSection = `Copyright© [${d.getFullYear()}] [${username}] \n
       This is free and unencumbered software released into the public domain.
 
       Anyone is free to copy, modify, publish, use, compile, sell, or
