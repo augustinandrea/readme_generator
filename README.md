@@ -2,8 +2,8 @@
 
   ## Description
   In this project I created a README Generator. The application starts and you are prompted with different questions related to different parts that should exists in a professional README. There is a license badge generated at the top and a license copyright section. There is a video showing an example of the process.
-  https://drive.google.com/file/d/1-AlUF_DvNWvEp7DbpX56ubtFBd1IttST/view?usp=sharing
-
+  https://youtu.be/lxuPHwpTna8
+  
   ![video](./Develop/assets/example_start_gif.gif "README example")
 
   ## Table of Contents
